@@ -35,3 +35,4 @@ console.log(cars)
 // console.log(cars.slice(0,1)) //you can specify from where to where you want to splice the array 
 // console.log(cars);
 
+
