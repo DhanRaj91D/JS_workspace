@@ -44,3 +44,8 @@ async function getData() {
   
   document.querySelector("#getdata").addEventListener("click", getData);
   document.querySelector("#senddata").addEventListener("click", sendData);
+
+  function remove(el) {
+    var element = el;
+    element.remove();
+  }
