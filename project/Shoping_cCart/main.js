@@ -45,7 +45,7 @@ let generateShop = () => {
   return (shop.innerHTML = shopItemData
     .map((x) => {
       let { id, name, price, desc, img } = x;
-      let search=basket.find((x)=>x.id === id) || [];
+      let search = basket.find((x) => x.id === id) || [];
       return `
         <div class="item">
         <img width="220" src="${img}" alt="" />
@@ -59,7 +59,7 @@ let generateShop = () => {
             <div class="button">
               <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
               <div id=${id} class="quantity">
-              ${search.item === undefined? 0 : search.item}
+              ${search.item === undefined ? 0 : search.item}
               </div>
               <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
             </div>
@@ -87,21 +87,27 @@ let increment = (id) => {
     search.item += 1;
   }
   // console.log(basket)
-  localStorage.setItem("data",JSON.stringify(basket))
   update(selectedItem.id);
+  localStorage.setItem("data", JSON.stringify(basket));
+
+ 
 };
 
 let decrement = (id) => {
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
 
-  if (search.item === 0) return;
+  if (search === undefined) return;
+  else if (search.item === 0) return;
   else {
     search.item -= 1;
   }
   // console.log(basket)
-  localStorage.setItem("data",JSON.stringify(basket))
   update(selectedItem.id);
+  basket = basket.filter((x) => x.item !== 0);
+  localStorage.setItem("data", JSON.stringify(basket));
+ 
+ 
 };
 
 let update = (id) => {

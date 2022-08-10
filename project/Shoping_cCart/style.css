@@ -8,6 +8,10 @@ body{
     font-family: sans-serif;
 }
 
+i{
+    cursor: pointer;
+}
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -92,3 +96,4 @@ body{
         grid-template-columns: repeat(1,223px);
     }
 }
+
