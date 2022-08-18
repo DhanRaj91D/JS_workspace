@@ -12,6 +12,11 @@ i{
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+    color: wheat;
+}
+
 .navbar{
     display: flex;
     flex-direction: row;

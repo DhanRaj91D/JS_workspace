@@ -9,6 +9,12 @@ function getName() {
     console.log("Dhanraj");
 }
 
+
+//This arrow function is behave like variable it will store undefined in it at start and you cannot access it before initialization 
+//In the memory allocation phase of execution context it allocate undefined to func 
+var func = () =>{
+    console.log("Arrow function");
+}
 //if you use let and const it follows concept of temporal dead zone
 
 // console.log(aa); // in case of let and const you cannot access them before as it follows tdz so they will gve you

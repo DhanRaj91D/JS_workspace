@@ -7,7 +7,7 @@
 //to do that JS maintain Call Stack
 
 function one() {
-    console.log("In one. Calling two.");s
+    console.log("In one. Calling two.");
     two();
   }
   
